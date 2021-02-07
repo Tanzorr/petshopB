@@ -39,13 +39,14 @@ class Product
     private $price;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="updated_by")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="created_by")
      * @ORM\Column ( nullable=true)
      */
     private $crated_by;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="created_at")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="updated_by")
+     *  @ORM\Column ( nullable=true)
      */
     private $updated_by;
 

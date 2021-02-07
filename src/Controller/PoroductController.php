@@ -62,7 +62,6 @@ class PoroductController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
         $content = json_decode($request->getContent());
-        dd($request);
         $product->setName($content->title);
         $product->setDescription($content->description);
         $product->setImg($content->image);
