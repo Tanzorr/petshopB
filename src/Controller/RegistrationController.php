@@ -31,13 +31,8 @@ class RegistrationController extends AbstractController
         $user->setPassword($passwordEncoder->encodePassword($content->password));
         $user->setRoles(['ROLE_ADMIN']);
         $entityManager = $this->getDoctrine()->getManager();
-<<<<<<< HEAD
         $entityManager->persist($user);
         $entityManager->flush();
-=======
-            $entityManager->persist($user);
-            $entityManager->flush();
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
             // do anything else you need here, like send an email
 
             return $guardHandler->authenticateUserAndHandleSuccess(

@@ -4,15 +4,10 @@ namespace App\Security;
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
-<<<<<<< HEAD
 use http\Env\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
-=======
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Request;
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -26,10 +21,7 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 use Symfony\Component\Security\Guard\PasswordAuthenticatedInterface;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
-<<<<<<< HEAD
 use Symfony\Component\Routing\Annotation\Route;
-=======
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
 
 class LoginAuthenticator extends AbstractFormLoginAuthenticator implements PasswordAuthenticatedInterface
 {
@@ -68,15 +60,12 @@ class LoginAuthenticator extends AbstractFormLoginAuthenticator implements Passw
             $credentials['email']
         );
 
-<<<<<<< HEAD
         $session = new Session();
         $session->start();
         $session->set('token', $credentials['csrf_token']);
 
 
 
-=======
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
         return $credentials;
     }
 
@@ -124,9 +113,6 @@ class LoginAuthenticator extends AbstractFormLoginAuthenticator implements Passw
     {
         return $this->urlGenerator->generate(self::LOGIN_ROUTE);
     }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
 }

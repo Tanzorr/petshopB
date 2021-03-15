@@ -18,21 +18,12 @@ security:
         api_frontend:
             pattern: ^/api/products
             stateless: true
-<<<<<<< HEAD
             anonymous: true
 
         api:
             pattern: ^/api
             stateless: true
             anonymous: true
-=======
-            anonymous: true
-
-        api:
-            pattern: ^/api
-            stateless: true
-            anonymous: true
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
             provider: app_user_provider
             guard:
                 authenticators:
@@ -59,10 +50,7 @@ security:
                 password_path: password
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
-<<<<<<< HEAD
 
-=======
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication

@@ -7,7 +7,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-<<<<<<< HEAD
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Csrf\CsrfToken;
@@ -34,15 +33,6 @@ class ApiController extends AbstractController
 
     public function register(Request $request, UserPasswordEncoderInterface $encoder)
     {
-=======
-
-class ApiController extends AbstractController
-{
-   public function register(Request $request, UserPasswordEncoderInterface $encoder)
-   {
-
-
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
         $em = $this->getDoctrine()->getManager();
         $user = new User();
         $content = json_decode($request->getContent());
@@ -57,7 +47,6 @@ class ApiController extends AbstractController
         $em->flush();
 
         return new Response(sprintf('User is successfylly created', $user->getUsername()));
-<<<<<<< HEAD
     }
 
 
@@ -88,12 +77,3 @@ class ApiController extends AbstractController
     }
 }
 
-=======
-   }
-
-   public function api ()
-   {
-       return new Response(sprintf('Logged in as ', $this->getUser() , $this->getUser()->getUsername()));
-   }
-}
->>>>>>> 915671ad302953484ec79c8f4689fe07d1c7f10f
