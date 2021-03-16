@@ -48,6 +48,7 @@ class PoroductController extends AbstractController
         $product->setDescription($content->description);
         $product->setImg($content->image);
         $product->setPrice($content->price);
+        $product->setCreatedAt(new \DateTime());
         $em->persist($product);
         $em->flush();
         return $this->json("added product");
@@ -61,7 +62,6 @@ class PoroductController extends AbstractController
     {
         $em = $this->getDoctrine()->getManager();
         $content = json_decode($request->getContent());
-        dd($request);
         $product->setName($content->title);
         $product->setDescription($content->description);
         $product->setImg($content->image);
