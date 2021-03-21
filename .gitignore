@@ -1,11 +1,14 @@
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
-/var/
+/var/cache
+/var/log
+/var/sessions/
+/var/spool/
+.idea/
 /vendor/
 ###< symfony/framework-bundle ###
 
@@ -15,14 +18,17 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 
+###> lexik/jwt-authentication-bundle ###
+#/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###
+
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
 npm-debug.log
 yarn-error.log
-.idea/
 ###< symfony/webpack-encore-bundle ###
 
 ###> lexik/jwt-authentication-bundle ###
-#/config/jwt/*.pem
+/config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###

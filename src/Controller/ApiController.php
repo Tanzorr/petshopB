@@ -51,13 +51,7 @@ class ApiController extends AbstractController
 
 
 
-    public function api()
-    {
 
-
-
-
-    }
 
     /**
      * @Route("/is_login", name="is_login")
